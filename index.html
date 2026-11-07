@@ -1,4 +1,4 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#071b1b"><title>Sensible Soccer 2026 — v0.49 Filet bas translucide</title><style>
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="theme-color" content="#071b1b"><title>Sensible Soccer 2026 — v0.50 But bas suspendu</title><style>
 :root{--lime:#c4ff81;--cream:#f7d78a;--ink:#081d1e;--muted:#acc3bc}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#071c1e;color:#eff9ee;font-family:Arial,sans-serif}button,select,input,textarea{font:inherit}button{cursor:pointer}#app{width:100%;height:100dvh;overflow:hidden;position:relative;background:#0b2626}#pitch{display:block;width:100%;height:100%;touch-action:none}#hud{display:none;position:absolute;top:12px;left:50%;transform:translateX(-50%);min-width:min(590px,75vw);height:62px;background:#0b2425ee;border:1px solid #ffffff40;border-radius:12px;align-items:center;justify-content:space-between;z-index:5;box-shadow:0 14px 55px #0009;backdrop-filter:blur(12px);padding:0 13px;gap:10px}#hud span{flex:1;max-width:165px;font:800 22px 'Arial Narrow',Arial,sans-serif;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}#hud span:last-of-type{text-align:right}#hud strong{display:flex;align-items:center;justify-content:center;white-space:nowrap;font:900 34px Arial;background:var(--lime);color:#082217;padding:8px 21px;border-radius:8px}#hud small{position:absolute;left:50%;top:calc(100% + 4px);transform:translateX(-50%);background:#0b2425;color:#e7fada;font-weight:800;padding:4px 15px;border-radius:5px}#nav{position:absolute;right:16px;top:15px;z-index:5;display:none;gap:7px}#nav button,#editor button:not(.primary){border:1px solid #ffffff65;background:#092b2dcc;color:white;padding:7px 13px;border-radius:8px;font-size:21px}#flash{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;z-index:4;pointer-events:none;text-shadow:0 8px 18px #000b;background:radial-gradient(#12291aaa,transparent 65%)}#flash.show{display:flex}#flash strong{font:900 clamp(72px,15vw,195px)/.8 Impact,'Arial Narrow',sans-serif;color:var(--lime);font-style:italic;letter-spacing:-3px}#flash span{font-size:25px;font-weight:900;letter-spacing:6px;margin-top:22px}#help{display:none;position:absolute;left:50%;bottom:16px;transform:translateX(-50%);font-size:11px;letter-spacing:.4px;white-space:nowrap;color:#c8e1d2;background:#051716d9;border:1px solid #ffffff35;border-radius:50px;padding:10px 14px;z-index:3}#help b{color:var(--lime)}#app.playing #hud,#app.playing #nav{display:flex}#app.playing #help{display:block}
 #menu{position:absolute;inset:0;z-index:8;display:flex;align-items:center;justify-content:center;overflow:auto;background:linear-gradient(105deg,#051817fa,#061b1cb0 62%,#061817fa),radial-gradient(circle at 40% 80%,#49855285,transparent 55%);backdrop-filter:blur(8px);padding:24px}#app.playing #menu{display:none}.layout{display:grid;grid-template-columns:1fr 440px;gap:28px;max-width:1140px;width:100%;margin:auto;align-items:center}.intro .kicker{letter-spacing:4px;font-size:11px;color:var(--lime);font-weight:900}.intro h1{font:900 clamp(64px,9vw,132px)/.8 Impact,'Arial Narrow',sans-serif;letter-spacing:-2px;margin:25px 0;max-width:620px}.intro h1 em{font-style:normal;color:var(--lime);display:block}.intro h1 i{font-style:normal;color:var(--cream);display:block}.intro p{max-width:425px;color:#c6d5d0;font-size:15px;line-height:1.6}.notes{display:flex;gap:13px;flex-wrap:wrap;margin:24px 0}.notes span{font-size:11px;color:#def5e1;border:1px solid #b7eb9d50;padding:8px;border-radius:5px;font-weight:800}.intro small{color:#84a69b}.setup{background:linear-gradient(140deg,#143738,#0a2326);border:1px solid #ffffff35;border-radius:17px;padding:26px;box-shadow:0 18px 70px #000a}.setupTop{display:flex;align-items:center;justify-content:space-between;color:#a7c8c0;font-size:11px;font-weight:900;letter-spacing:2px}.setupTop b{color:var(--lime);border:1px solid #b6ff7259;padding:7px;border-radius:30px;letter-spacing:1px}.setup h2,.editorBox h2{font:900 32px Impact,'Arial Narrow',sans-serif;margin:10px 0 12px;letter-spacing:.7px}.versus{display:flex;justify-content:center;align-items:center;gap:20px;margin:5px 0 19px}.versus>div{display:flex;align-items:center;flex-direction:column;gap:10px;flex:1}.versus strong{color:var(--cream);font:900 29px Impact,Arial}.versus label{font-size:10px;letter-spacing:2px;font-weight:900;color:#bccfc6}.shirt{width:66px;height:65px;display:grid;place-items:center;clip-path:polygon(18% 0,34% 10%,66% 10%,82% 0,100% 21%,88% 49%,81% 45%,81% 100%,19% 100%,19% 45%,12% 49%,0 21%);background:linear-gradient(90deg,#ecb12c 0 43%,#25204c 43% 57%,#ecb12c 57%);font-weight:900;font-size:22px;color:#fff;text-shadow:0 1px 4px #000a}.pair{display:grid;grid-template-columns:1fr 1fr;gap:13px}label{font-size:10px;letter-spacing:1.1px;font-weight:900;color:#b7d0c5;display:block;margin:10px 0 0}select,input,textarea{display:block;background:#061f23;color:#f4fff5;width:100%;min-width:0;border:1px solid #4d6f67;border-radius:8px;margin-top:8px;padding:12px;font-size:13px;letter-spacing:0}select:focus,input:focus,textarea:focus{outline:2px solid var(--lime)}button.primary{display:block;margin:20px 0 11px;width:100%;background:var(--lime);color:#0b2c20;border:0;border-radius:9px;font:900 24px Impact,Arial;letter-spacing:1px;padding:14px;box-shadow:0 4px 0 #789f54}button.primary:active{transform:translateY(3px);box-shadow:0 1px 0 #789f54}#edit{border:1px solid #64837a;color:#e1f4e3;background:#ffffff10;width:100%;border-radius:8px;padding:11px;font-size:12px;font-weight:900}.setup>p{font-size:10px;text-align:center;color:#91a9a5;margin:13px 0 0}
 #editor{position:absolute;z-index:12;inset:0;display:none;align-items:center;justify-content:center;background:#041a1bee;backdrop-filter:blur(15px);padding:18px}#editor.open{display:flex}.editorBox{background:#10343a;border:1px solid #b4ff7d77;border-radius:16px;padding:24px;max-height:95dvh;overflow:auto;width:min(540px,100%)}.editorTop{display:flex;justify-content:space-between;align-items:center}.editorBox p{font-size:12px;color:#a9c6bd;line-height:1.5}.editorBox textarea{resize:vertical;min-height:180px;line-height:1.5;font-family:monospace}.editorBox input[type=color]{height:42px;padding:3px}
@@ -1162,63 +1162,64 @@ function drawRetroUpperGoal(ctx){
 // The base of the goal remains anchored to the goal line (B), but the upright
 // face rises over the pitch. The goal is never drawn as an opaque carpet beyond B.
 function drawRetroLowerGoalBack(ctx){
- const left=GOAL_L,right=GOAL_R,foot=B;
- ctx.save();
- // Subtle ground shadow entirely outside the goal line; no opaque dark rectangle.
- ctx.fillStyle='rgba(4,28,20,.24)';
- ctx.beginPath();ctx.moveTo(left+6,foot+3);ctx.lineTo(right+12,foot+3);
- ctx.lineTo(right+31,foot+27);ctx.lineTo(left+14,foot+27);ctx.closePath();ctx.fill();
- ctx.strokeStyle='rgba(234,246,228,.30)';ctx.lineWidth=2;
- ctx.beginPath();ctx.moveTo(left,foot+3);ctx.lineTo(right,foot+3);ctx.stroke();
+ // Shadow under the near-end net: on the turf, from the goal mouth to the right.
+ // Original arcade construction: short wide rectangular net, not a tall U-shaped goal.
+ const left=GOAL_L,right=GOAL_R,line=B;
+ ctx.save();ctx.lineJoin='miter';
+ ctx.fillStyle='rgba(3,21,13,.60)';
+ ctx.beginPath();ctx.moveTo(right-2,line+3);ctx.lineTo(right+35,line+5);
+ ctx.lineTo(right+57,line+33);ctx.lineTo(right+15,line+43);
+ ctx.lineTo(left+10,line+43);ctx.lineTo(left+3,line+30);
+ ctx.lineTo(right-2,line+30);ctx.closePath();ctx.fill();
+ // Pixelated scattered shadow holes on the right. Intentionally not a 3D white side wall.
+ ctx.fillStyle='rgba(30,91,41,.78)';
+ for(let y=line+10;y<line+39;y+=6)for(let x=right+6;x<right+53;x+=9){
+  if((Math.round(x/9)+Math.round(y/6))%3===0)ctx.fillRect(x,y,3,2);
+ }
  ctx.restore();
 }
-// Call this as the LAST scene layer (after keepers, ball and goal celebrations).
-// Vertical height is *not* compressed by the ground camera perspective.
+// Upper goal sprite is untouched. This is a wholly separate, near-end foreground net.
+// The goal line crosses the mesh: bright suspended upper net ABOVE the line,
+// blue-black bottom net BELOW it. Keeper and turf remain legible through the holes.
 function drawRetroLowerGoalFront(ctx){
- const left=GOAL_L,right=GOAL_R,foot=B,top=B-87;
- const depthX=14,depthY=14;
+ const left=GOAL_L,right=GOAL_R,line=B;
+ const top=line-43, change=line-8, bottom=line+32;
+ const width=right-left;
  ctx.save();ctx.lineJoin='miter';ctx.lineCap='butt';
- // Open, partially transparent goal mouth. Green and players remain visible.
- ctx.fillStyle='rgba(8,42,29,.095)';ctx.fillRect(left+2,top+2,right-left-4,foot-top-3);
- // The roof and right net are separate glass-like layers, not a filled slab.
- ctx.fillStyle='rgba(223,241,219,.075)';ctx.beginPath();
- ctx.moveTo(left,top);ctx.lineTo(right,top);ctx.lineTo(right+depthX,top+depthY);
- ctx.lineTo(left+depthX,top+depthY);ctx.closePath();ctx.fill();
- ctx.fillStyle='rgba(234,255,230,.055)';ctx.beginPath();
- ctx.moveTo(right,top);ctx.lineTo(right+depthX,top+depthY);
- ctx.lineTo(right+depthX,foot+depthY);ctx.lineTo(right,foot);
- ctx.closePath();ctx.fill();
- // Mesh strands are visible but semi-transparent. The keeper MUST remain behind them.
- ctx.save();ctx.beginPath();ctx.rect(left+3,top+3,right-left-6,foot-top-5);ctx.clip();
- ctx.lineWidth=1;ctx.strokeStyle='rgba(222,244,231,.39)';
- for(let x=left+10;x<right;x+=10){ctx.beginPath();ctx.moveTo(x,top+2);ctx.lineTo(x,foot);ctx.stroke();}
- ctx.strokeStyle='rgba(231,250,237,.31)';
- for(let y=top+10;y<foot;y+=10){ctx.beginPath();ctx.moveTo(left,y);ctx.lineTo(right,y);ctx.stroke();}
+ // Translucent back: no opaque white rectangle and no inverted U frame.
+ ctx.fillStyle='rgba(218,234,182,.08)';ctx.fillRect(left+2,top+2,width-4,change-top-1);
+ // Bright, open upper net. The keeper remains visible underneath the sparse weave.
+ ctx.save();ctx.beginPath();ctx.rect(left+1,top+2,width-2,change-top-1);ctx.clip();
+ for(let row=0,y=top+5;y<change;y+=5,row++)for(let x=left+4+(row%2)*3;x<right-3;x+=8){
+   ctx.fillStyle='rgba(247,252,213,.80)';ctx.fillRect(x,y,3.1,2.0);
+   ctx.fillStyle='rgba(17,34,21,.22)';ctx.fillRect(x+4,y+1,2,1.5);
+ }
  ctx.restore();
- // Right side mesh: slight perspective, thinner than the front net.
- ctx.strokeStyle='rgba(225,244,236,.28)';ctx.lineWidth=1;
- for(let j=1;j<5;j++){
-  const f=j/5,x=right+depthX*f;
-  ctx.beginPath();ctx.moveTo(x,top+depthY*f);ctx.lineTo(x,foot+depthY*f);ctx.stroke();
+ // Dark, hanging front panel BELOW the goal line (the missing feature of v0.49).
+ // Transparent blue-black fill keeps green turf and players faintly visible below.
+ ctx.fillStyle='rgba(11,21,39,.50)';ctx.fillRect(left+1,change,width-2,bottom-change);
+ ctx.save();ctx.beginPath();ctx.rect(left+1,change,width-2,bottom-change);ctx.clip();
+ ctx.fillStyle='rgba(12,16,30,.32)';
+ for(let x=left+4;x<right;x+=8)ctx.fillRect(x,change,3,bottom-change);
+ for(let y=change+3;y<bottom;y+=6){
+   ctx.fillStyle='rgba(211,229,189,.43)';ctx.fillRect(left+2,y,width-4,1.4);
+   for(let x=left+5+((y-change)/6%2)*3;x<right-3;x+=8){
+    ctx.fillStyle='rgba(193,209,192,.56)';ctx.fillRect(x,y+2,3,2);
+   }
  }
- for(let j=1;j<8;j++){
-  const y=top+j*(foot-top)/8;
-  ctx.beginPath();ctx.moveTo(right,y);ctx.lineTo(right+depthX,y+depthY);ctx.stroke();
- }
- // Only the frame is solid. Mouth spans the line; the translucent net overlays the turf.
- ctx.strokeStyle='rgba(12,34,27,.55)';ctx.lineWidth=6;
- ctx.beginPath();ctx.moveTo(left-1,foot+2);ctx.lineTo(left-1,top-2);
- ctx.lineTo(right+1,top-2);ctx.lineTo(right+1,foot+2);ctx.stroke();
- ctx.strokeStyle='#f4faf0';ctx.lineWidth=3.6;
- ctx.beginPath();ctx.moveTo(left,foot);ctx.lineTo(left,top);
- ctx.lineTo(right,top);ctx.lineTo(right,foot);ctx.stroke();
- // Depth roof frame: almost transparent beyond the upright front rectangle.
- ctx.strokeStyle='rgba(241,252,241,.72)';ctx.lineWidth=2;
- ctx.beginPath();ctx.moveTo(right,top);ctx.lineTo(right+depthX,top+depthY);
- ctx.lineTo(right+depthX,foot+depthY);ctx.stroke();
- ctx.strokeStyle='rgba(239,251,237,.40)';ctx.beginPath();
- ctx.moveTo(left,top);ctx.lineTo(left+depthX,top+depthY);
- ctx.lineTo(right+depthX,top+depthY);ctx.stroke();
+ ctx.restore();
+ // Fine irregular seam where the net crosses the white endline. Not an opaque slab.
+ ctx.fillStyle='rgba(9,23,27,.62)';ctx.fillRect(left,line-2,width,3.5);
+ // Slim horizontal top bar with light edge, thick dark sideposts and tiny reflections.
+ ctx.fillStyle='#101c1b';ctx.fillRect(left-2,top-3,width+4,6);
+ ctx.fillStyle='#f5f5e3';ctx.fillRect(left,top-4,width,3);
+ ctx.fillStyle='#7c9090';ctx.fillRect(left,top,width,2);
+ ctx.fillStyle='#141a21';ctx.fillRect(left-2,top-1,3,bottom-top+2);
+ ctx.fillRect(right-1,top-1,3,bottom-top+2);
+ ctx.fillStyle='rgba(229,238,201,.87)';ctx.fillRect(left-2,top,1,change-top);
+ ctx.fillRect(right+1,top,1,change-top);
+ // Thin dark lower edging instead of the prior glaring white rectangle.
+ ctx.fillStyle='rgba(8,17,22,.82)';ctx.fillRect(left,bottom-1,width,2);
  ctx.restore();
 }
 
@@ -1526,7 +1527,7 @@ window.__SR_TEST__={start,step,quit,pause,
   ball.owner=k;ball.hold=0;ball.lock=0;ball.x=k.x;ball.y=k.y;ball.z=20;
   kick(k,kind,charge);return {keeperAction:k.keeperAction?.kind,target:k.keeperAction?.target?.point,
    receiver:k.keeperAction?.target?.receiver?.name};},
-forceNearMiss:(side=HOME)=>{if(!playing)start();freeze=0;restart=null;let p=people.find(q=>q.side===side&&q.n===9);lastShotActor=p;lastShotTime=clock;ball.owner=null;ball.last=side;ball.lastKick='shot';ball.lastActor=p;ball.x=GOAL_R+28;ball.y=side===HOME?T-12:B+12;ball.z=26;ball.vx=575;ball.vy=side===HOME?-620:620;boundary();return {cine:cinematic?.kind,restart:restart?.kind};},forceGoal:(side=HOME)=>{if(!playing)start();freeze=0;restart=null;ball.owner=null;ball.last=side;ball.lastActor=people.find(p=>p.side===side&&p.n===9);ball.x=W/2;ball.y=side===HOME?T-10:B+10;ball.z=12;goalScored(side);return {score:[...score],phase:cinematic?.phase};},forceFoul:(offenderSide=AWAY,rear=true)=>{if(!playing)start();freeze=0;restart=null;const attacker=people.find(p=>p.side===offenderSide&&!p.keeper),victim=people.find(p=>p.side!==offenderSide&&!p.keeper);victim.dx=0;victim.dy=-1;attacker.x=victim.x;attacker.y=victim.y+(rear?13:-13);attacker.slide=rear?.3:0;return foulBy(attacker,victim)},cinemaState:()=>({kind:cinematic?.kind,phase:cinematic?.phase,index:cinematic?.frameIndex,frames:cinematic?.frames.length,card:$('#cardText').textContent,history:replayHistory.length}),forceRestart:(kind,side=HOME,x=W/2,y=side===HOME?T:B)=>{if(!playing)start();setRestart(kind,side,x,y);freeze=0;return {kind:restart?.kind,side:restart?.side,taker:restart?.taker?.n}},metrics:()=>({spriteScale:SPRITE_SCALE,playerSpeed:PLAYER_SPEED,pitch:{width:R-L,length:B-T},camera:{...cam},zoom:$('#camera').value,goals:{left:GOAL_L,right:GOAL_R}}),forceBall:(b)=>{if(!playing)start();freeze=0;ball={...ball,owner:null,x:b.x??W/2,y:b.y??H/2,z:b.z??0,vx:b.vx??0,vy:b.vy??0,vz:b.vz??0,lock:b.lock??0,last:b.last??HOME,directThrowIn:b.directThrowIn??null,trail:[],hold:0,spin:0};},forceOwner:(side=HOME,index=9)=>{if(!playing)start();freeze=0;let p=people.find(p=>p.side===side&&p.n===index);p.cool=0;ball.owner=p;ball.x=p.x+p.dx*14;ball.y=p.y+p.dy*14;ball.z=0;ball.last=side;return p.name},selection:(side=HOME)=>({chosen:(side===HOME?chosen:chosenAway)?.n,manual:autoSelect[side].manual,cool: autoSelect[side].cool,reason:autoSelect[side].reason,projected:projectedBall(),ranking:rankedCandidates(side).slice(0,5).map(x=>({n:x.p.n,score:x.score,distance:x.distance}))}),setSelected:(side,n)=>{let p=people.find(q=>q.side===side&&q.n===n);if(p){if(side===HOME)chosen=p;else chosenAway=p;autoSelect[side].manual=0;autoSelect[side].cool=0;}return !!p},debugCharged:()=>JSON.parse(JSON.stringify(heldActions)),view:{perspectiveY:.79,goalWidth:GOAL_R-GOAL_L,goalNetHeight:61,upperGoalKind:"reference-extracted-elevation-net-and-shadow",lowerGoalKind:"front-upright-translucent-keeper-visible",pitchSideBuffer:122},snapshotPlayers:()=>people.map(p=>({side:p.side,n:p.n,name:p.name,x:p.x,y:p.y,dx:p.dx,dy:p.dy,slide:p.slide,stand:p.stand,intercept:p.intercept,header:p.header,headerPhase:p.headerAction?+(p.headerAction.t/p.headerAction.duration).toFixed(3):null,headerHit:p.headerAction?.hit||false,keeperDivePhase:p.keeperDive?+(p.keeperDive.t/p.keeperDive.duration).toFixed(3):null,keeperRelease:p.keeperAction?+(p.keeperAction.t/p.keeperAction.duration).toFixed(2):null,throwPhase:p.throwAction?+(p.throwAction.t/p.throwAction.duration).toFixed(2):null,saveCooldown:p.saveCooldown,keeper:p.keeper})),testAction:(side,n,action)=>{let p=people.find(q=>q.side===side&&q.n===n);if(!p)return false;p.cool=0;return action==='header'?header(p,'shot'):action==='slide'?slidingTackle(p):false},placePlayer:(side,n,x,y,dx=0,dy=side===HOME?-1:1)=>{let p=people.find(q=>q.side===side&&q.n===n);if(p){p.x=x;p.y=y;p.dx=dx;p.dy=dy;p.cool=0;p.slide=0;}return !!p},state:()=>({playing,paused,ended,score:[...score],clock,players:people.length,selected:chosen?.name,selectedAway:chosenAway?.name,localTwo,ball:ball?{x:ball.x,y:ball.y,z:ball.z,owner:ball.owner?.name,last:ball.last,lastKick:ball.lastKick,directThrowIn:ball.directThrowIn,passReceiver:ball.passReceiver?.name,passTarget:ball.passTarget,rollAngle:ball.rollAngle,keeperGrace:ball.keeperReleaseGrace,vx:ball.vx,vy:ball.vy}:null,customTeams:teams.filter(t=>t.custom).length,rules:JSON.parse(JSON.stringify(ruleStats)),stats:JSON.parse(JSON.stringify(matchStats)),restart:restart?.kind,restartSide:restart?.side,restartElapsed:restart?.elapsed,home:homeTeam?.name,away:awayTeam?.name,soundOn})};
+forceNearMiss:(side=HOME)=>{if(!playing)start();freeze=0;restart=null;let p=people.find(q=>q.side===side&&q.n===9);lastShotActor=p;lastShotTime=clock;ball.owner=null;ball.last=side;ball.lastKick='shot';ball.lastActor=p;ball.x=GOAL_R+28;ball.y=side===HOME?T-12:B+12;ball.z=26;ball.vx=575;ball.vy=side===HOME?-620:620;boundary();return {cine:cinematic?.kind,restart:restart?.kind};},forceGoal:(side=HOME)=>{if(!playing)start();freeze=0;restart=null;ball.owner=null;ball.last=side;ball.lastActor=people.find(p=>p.side===side&&p.n===9);ball.x=W/2;ball.y=side===HOME?T-10:B+10;ball.z=12;goalScored(side);return {score:[...score],phase:cinematic?.phase};},forceFoul:(offenderSide=AWAY,rear=true)=>{if(!playing)start();freeze=0;restart=null;const attacker=people.find(p=>p.side===offenderSide&&!p.keeper),victim=people.find(p=>p.side!==offenderSide&&!p.keeper);victim.dx=0;victim.dy=-1;attacker.x=victim.x;attacker.y=victim.y+(rear?13:-13);attacker.slide=rear?.3:0;return foulBy(attacker,victim)},cinemaState:()=>({kind:cinematic?.kind,phase:cinematic?.phase,index:cinematic?.frameIndex,frames:cinematic?.frames.length,card:$('#cardText').textContent,history:replayHistory.length}),forceRestart:(kind,side=HOME,x=W/2,y=side===HOME?T:B)=>{if(!playing)start();setRestart(kind,side,x,y);freeze=0;return {kind:restart?.kind,side:restart?.side,taker:restart?.taker?.n}},metrics:()=>({spriteScale:SPRITE_SCALE,playerSpeed:PLAYER_SPEED,pitch:{width:R-L,length:B-T},camera:{...cam},zoom:$('#camera').value,goals:{left:GOAL_L,right:GOAL_R}}),forceBall:(b)=>{if(!playing)start();freeze=0;ball={...ball,owner:null,x:b.x??W/2,y:b.y??H/2,z:b.z??0,vx:b.vx??0,vy:b.vy??0,vz:b.vz??0,lock:b.lock??0,last:b.last??HOME,directThrowIn:b.directThrowIn??null,trail:[],hold:0,spin:0};},forceOwner:(side=HOME,index=9)=>{if(!playing)start();freeze=0;let p=people.find(p=>p.side===side&&p.n===index);p.cool=0;ball.owner=p;ball.x=p.x+p.dx*14;ball.y=p.y+p.dy*14;ball.z=0;ball.last=side;return p.name},selection:(side=HOME)=>({chosen:(side===HOME?chosen:chosenAway)?.n,manual:autoSelect[side].manual,cool: autoSelect[side].cool,reason:autoSelect[side].reason,projected:projectedBall(),ranking:rankedCandidates(side).slice(0,5).map(x=>({n:x.p.n,score:x.score,distance:x.distance}))}),setSelected:(side,n)=>{let p=people.find(q=>q.side===side&&q.n===n);if(p){if(side===HOME)chosen=p;else chosenAway=p;autoSelect[side].manual=0;autoSelect[side].cool=0;}return !!p},debugCharged:()=>JSON.parse(JSON.stringify(heldActions)),view:{perspectiveY:.79,goalWidth:GOAL_R-GOAL_L,goalNetHeight:61,upperGoalKind:"reference-extracted-elevation-net-and-shadow",lowerGoalKind:"retro-net-straddling-endline-transparent-upper-and-dark-lower",pitchSideBuffer:122},snapshotPlayers:()=>people.map(p=>({side:p.side,n:p.n,name:p.name,x:p.x,y:p.y,dx:p.dx,dy:p.dy,slide:p.slide,stand:p.stand,intercept:p.intercept,header:p.header,headerPhase:p.headerAction?+(p.headerAction.t/p.headerAction.duration).toFixed(3):null,headerHit:p.headerAction?.hit||false,keeperDivePhase:p.keeperDive?+(p.keeperDive.t/p.keeperDive.duration).toFixed(3):null,keeperRelease:p.keeperAction?+(p.keeperAction.t/p.keeperAction.duration).toFixed(2):null,throwPhase:p.throwAction?+(p.throwAction.t/p.throwAction.duration).toFixed(2):null,saveCooldown:p.saveCooldown,keeper:p.keeper})),testAction:(side,n,action)=>{let p=people.find(q=>q.side===side&&q.n===n);if(!p)return false;p.cool=0;return action==='header'?header(p,'shot'):action==='slide'?slidingTackle(p):false},placePlayer:(side,n,x,y,dx=0,dy=side===HOME?-1:1)=>{let p=people.find(q=>q.side===side&&q.n===n);if(p){p.x=x;p.y=y;p.dx=dx;p.dy=dy;p.cool=0;p.slide=0;}return !!p},state:()=>({playing,paused,ended,score:[...score],clock,players:people.length,selected:chosen?.name,selectedAway:chosenAway?.name,localTwo,ball:ball?{x:ball.x,y:ball.y,z:ball.z,owner:ball.owner?.name,last:ball.last,lastKick:ball.lastKick,directThrowIn:ball.directThrowIn,passReceiver:ball.passReceiver?.name,passTarget:ball.passTarget,rollAngle:ball.rollAngle,keeperGrace:ball.keeperReleaseGrace,vx:ball.vx,vy:ball.vy}:null,customTeams:teams.filter(t=>t.custom).length,rules:JSON.parse(JSON.stringify(ruleStats)),stats:JSON.parse(JSON.stringify(matchStats)),restart:restart?.kind,restartSide:restart?.side,restartElapsed:restart?.elapsed,home:homeTeam?.name,away:awayTeam?.name,soundOn})};
 })();
 
 </script></body></html>
